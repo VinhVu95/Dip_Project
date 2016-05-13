@@ -1,4 +1,11 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">DooD</string>
     <string name="action_settings">Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="finish_title">Are you sure to finish this Task?</string>
+    <string name="type">Master</string>
+    <string name="score">"6/10"</string>
+    <string name="week">"Wk"</string>
+    <string name="profile">Profile</string>
 </resources>

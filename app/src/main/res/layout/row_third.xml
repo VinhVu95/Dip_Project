@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wrapTextView"
+        android:layout_marginLeft="8dp">
+        <ImageView
+            android:id="@+id/clipboard"
+            android:layout_width="13dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="13dp"
+            android:src="@drawable/clipboard"
+            android:layout_alignParentLeft="true"
+            />
+        <TextView
+            android:id="@+id/textViewItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            android:text="TextView"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_toRightOf="@+id/clipboard"
+            android:paddingLeft="5dp"/>
+        <ImageView
+            android:id="@+id/sand_clock"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/sand_clock"
+            android:layout_below="@+id/clipboard"
+            android:paddingTop="5dp"/>
+        <TextView
+            android:layout_below="@id/textViewItemName"
+            android:id="@+id/textViewItemDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            android:text="TextView"
+            android:textColor="@android:color/black"
+            android:layout_toRightOf="@+id/sand_clock"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:id="@+id/view" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finish"
+            android:id="@+id/finishButton"
+            android:layout_below="@+id/view"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/topView"
+        android:background="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <!-- BACK BUTTON -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+
+
+            android:id="@+id/leftButton"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnback"
+                android:src="@android:drawable/ic_input_delete"
+                android:background="@android:color/transparent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" />
+
+        </RelativeLayout>
+
+        <!-- TOP RIGHT -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/leftButton"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Task"
+                android:textSize="18dp"
+                android:id="@+id/textView3"
+                android:textColor="#ffffff"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop = "true"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:id="@+id/editText"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:layout_below="@+id/textView3"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_alignStart="@+id/textView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Category"
+                android:textSize="18dp"
+                android:id="@+id/textView2"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/editText"
+                android:layout_alignParentStart="true"
+                />
+
+            <Spinner
+                android:layout_below="@id/textView2"
+                android:layout_alignParentStart="true"
+                android:id="@+id/category_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- MID VIEW-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topView"
+
+        android:id="@+id/midView"
+        android:layout_gravity="center_horizontal">
+
+        <RelativeLayout
+            android:id="@+id/mid1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:paddingBottom="5dp">
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:id="@+id/imageView2"
+                android:src="@drawable/calendar"
+                 />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/imageView2"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Actual Deadline Date"
+                    android:textSize="18dp"
+                    android:id="@+id/textView4"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/txtdate"
+                    android:layout_below="@+id/textView4"
+                    android:layout_alignStart="@+id/textView4"
+                    android:textColor="#FF4081"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mid2"
+            android:layout_below="@id/mid1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:paddingBottom="12dp">
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:id="@+id/imageView3"
+                android:src="@drawable/clock"
+                />
+            <RelativeLayout
+                android:layout_toRightOf="@id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Actual Deadline Time"
+                    android:textSize="18dp"
+                    android:id="@+id/textView5"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_below="@id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/txttime"
+                    android:textColor="#FF4081"
+                    android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mid3"
+            android:layout_below="@id/mid2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:paddingBottom="5dp">
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:id="@+id/imageView4"
+                android:src="@drawable/calendar"
+                 />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/imageView4"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Personal Deadline Date"
+                    android:textSize="18dp"
+                    android:id="@+id/textView6"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/txtdate2"
+                    android:layout_below="@+id/textView6"
+                    android:layout_alignStart="@+id/textView6"
+                    android:textColor="#FF4081"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mid4"
+            android:layout_below="@id/mid3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:paddingBottom="5dp">
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:id="@+id/imageView5"
+                android:src="@drawable/clock"
+                android:layout_alignParentStart="true"
+                />
+            <RelativeLayout
+                android:layout_toRightOf="@id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Personal Deadline Time"
+                    android:textSize="18dp"
+                    android:id="@+id/textView7"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_below="@id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/txttime2"
+                    android:textColor="#FF4081"
+                    android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <!-- BOTTOM VIEW -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF4081"
+            android:text="SUBMIT TASK"
+            android:id="@+id/submitbutton"
+            android:textColor="#fbfbfb"
+            android:layout_below="@+id/mid4"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

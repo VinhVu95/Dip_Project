@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/topView"
+        android:background="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <!--BACK BUTTON-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/leftButton"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnback"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_input_delete"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/main_content"
+            android:paddingLeft="5dp"
+            android:layout_toRightOf="@id/leftButton">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Category"
+                android:textSize="18dp"
+                android:id="@+id/textView1"
+                android:textColor="@android:color/background_dark"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:id= "@+id/editText"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:layout_below="@id/textView1"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_alignStart="@+id/textView2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Parent Category"
+                android:textSize="18dp"
+                android:id="@+id/textView2"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/editText"
+                android:layout_alignParentStart="true"
+                />
+
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:id="@+id/parent_category_spinner"
+                android:layout_below="@id/textView2"></Spinner>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topView"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF4081"
+            android:text="SUBMIT CATEGORY"
+            android:id="@+id/submitbutton"
+            android:textColor="#fbfbfb"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
